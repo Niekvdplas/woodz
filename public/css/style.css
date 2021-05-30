@@ -69,6 +69,12 @@ hr {
 	padding: 15px;
 	transition: all 0.8s;
 }
+
+.headerlogo {
+	position: absolute;
+	margin-top: -28px;
+}
+
 #menu.navbar-default {
 	background-color: #fff;
 	border-color: rgba(231, 231, 231, 0);

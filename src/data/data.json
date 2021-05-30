@@ -1,8 +1,8 @@
 {
     "Header": {
 
-        "title": "Woodz landing page",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+        "title": "Welkom bij Woodz kozijnen.",
+        "paragraph": "Wij zijn een jong dynamisch bedrijf dat uw complete kozijnen zorg uit handen neemt."
 
     },
     "About": {
@@ -105,12 +105,9 @@
         }
     ],
     "Contact": {
-        "address": "4321 California St, San Francisco, CA 12345 ",
-        "phone": "+1 123 456 1234",
-        "email": "info@company.com",
-        "facebook": "fb.com",
-        "twitter": "twitter.com",
-        "youtube": "youtube.com"
+        "address": "Maessloot 8, 2231 PB, Rijnsburg",
+        "phone": "+31653942278",
+        "email": "info@woodzkozijnen.nl"
     },
     "Features": [{
             "icon": "fa fa-comments-o",
