@@ -87,7 +87,7 @@ export const Contact = (props) => {
                   <p className='help-block text-danger'></p>
                 </div>
                 <div id='success'></div>
-                <button type='submit' className='btn btn-custom btn-lg'>
+                <button type='submit' className='btn btn-custom btn-lg' onClick={() => { window.location.reload() }}>
                   Stuur Email
                 </button>
               </form>
