@@ -15,15 +15,15 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='img/portfolio/01-large.jpg'
+                    href='img/portfolio/door.jpg'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
-                      <h4>Lorem Ipsum</h4>
+                      <h4>Ook voor een mooie voordeur kunt u bij ons terecht</h4>
                     </div>
                     <img
-                      src='img/portfolio/01-small.jpg'
+                      src='img/portfolio/door.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -36,15 +36,32 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='img/portfolio/02-large.jpg'
+                    href='img/portfolio/frames.jpg'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
-                      <h4>Adipiscing Elit</h4>
+                      <h4>Prachtige kozijnen, klaar voor transport</h4>
                     </div>
                     <img
-                      src='img/portfolio/02-small.jpg'
+                      src='img/portfolio/frames.jpg'
+                      className='img-responsive'
+                      alt='Project Title'
+                    />{' '}
+                  </a>{' '}
+                </div>
+                <div className='hover-bg'>
+                  {' '}
+                  <a
+                    href='img/portfolio/transport.jpg'
+                    title='Project Title'
+                    data-lightbox-gallery='gallery1'
+                  >
+                    <div className='hover-text'>
+                      <h4>Prachtige kozijnen, klaar voor transport</h4>
+                    </div>
+                    <img
+                      src='img/portfolio/transport.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -57,15 +74,15 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='img/portfolio/03-large.jpg'
+                    href='img/portfolio/storefront.jpg'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
-                      <h4>Lorem Ipsum</h4>
+                      <h4>Afgewerkte winkelpui</h4>
                     </div>
                     <img
-                      src='img/portfolio/03-small.jpg'
+                      src='img/portfolio/storefront.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -78,15 +95,15 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='img/portfolio/04-large.jpg'
+                    href='img/portfolio/collage1.jpg'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
-                      <h4>Lorem Ipsum</h4>
+                      <h4>Before</h4>
                     </div>
                     <img
-                      src='img/portfolio/04-small.jpg'
+                      src='img/portfolio/collage1.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -99,15 +116,15 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='img/portfolio/05-large.jpg'
+                    href='img/portfolio/collage2.jpg'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
-                      <h4>Adipiscing Elit</h4>
+                      <h4>Tijdens</h4>
                     </div>
                     <img
-                      src='img/portfolio/05-small.jpg'
+                      src='img/portfolio/collage2.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -120,78 +137,15 @@ export const Gallery = (props) => {
                 <div className='hover-bg'>
                   {' '}
                   <a
-                    href='img/portfolio/06-large.jpg'
+                    href='img/portfolio/collage3.jpg'
                     title='Project Title'
                     data-lightbox-gallery='gallery1'
                   >
                     <div className='hover-text'>
-                      <h4>Dolor Sit</h4>
+                      <h4>After</h4>
                     </div>
                     <img
-                      src='img/portfolio/06-small.jpg'
-                      className='img-responsive'
-                      alt='Project Title'
-                    />{' '}
-                  </a>{' '}
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-6 col-md-4 col-lg-4'>
-              <div className='portfolio-item'>
-                <div className='hover-bg'>
-                  {' '}
-                  <a
-                    href='img/portfolio/07-large.jpg'
-                    title='Project Title'
-                    data-lightbox-gallery='gallery1'
-                  >
-                    <div className='hover-text'>
-                      <h4>Dolor Sit</h4>
-                    </div>
-                    <img
-                      src='img/portfolio/07-small.jpg'
-                      className='img-responsive'
-                      alt='Project Title'
-                    />{' '}
-                  </a>{' '}
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-6 col-md-4 col-lg-4'>
-              <div className='portfolio-item'>
-                <div className='hover-bg'>
-                  {' '}
-                  <a
-                    href='img/portfolio/08-large.jpg'
-                    title='Project Title'
-                    data-lightbox-gallery='gallery1'
-                  >
-                    <div className='hover-text'>
-                      <h4>Lorem Ipsum</h4>
-                    </div>
-                    <img
-                      src='img/portfolio/08-small.jpg'
-                      className='img-responsive'
-                      alt='Project Title'
-                    />{' '}
-                  </a>{' '}
-                </div>
-              </div>
-            </div>
-            <div className='col-sm-6 col-md-4 col-lg-4'>
-              <div className='portfolio-item'>
-                <div className='hover-bg'>
-                  {' '}
-                  <a
-                    href='img/portfolio/09-large.jpg'
-                    title='Project Title'
-                    data-lightbox-gallery='gallery1'
-                  >
-                    <div className='hover-text'>
-                      <h4>Adipiscing Elit</h4>
-                    </div>
-                    <img
-                      src='img/portfolio/09-small.jpg'
+                      src='img/portfolio/collage3.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}

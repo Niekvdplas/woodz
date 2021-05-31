@@ -52,7 +52,7 @@ export const Contact = (props) => {
                         id='name'
                         name='name'
                         className='form-control'
-                        placeholder='Name'
+                        placeholder='Naam'
                         required
                         onChange={handleChange}
                       />
@@ -80,7 +80,7 @@ export const Contact = (props) => {
                     id='message'
                     className='form-control'
                     rows='4'
-                    placeholder='Message'
+                    placeholder='Bericht'
                     required
                     onChange={handleChange}
                   ></textarea>

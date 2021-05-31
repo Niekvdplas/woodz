@@ -6,18 +6,16 @@
 
     },
     "About": {
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "paragraph": "Ons bedrijf maakt kozijnen voor vaste opdrrachtgevers in de bouw en voor particulieren. Daarnaast verzorgen wij ook ambachtelijk timmerwerk. Kwaliteit staat bij ons voorop. Machinale bewerking van <b> houten </b> kozijnen, ramen en deuren is waar wij in excelleren.",
         "Why": [
-            "Lorem ipsum dolor",
-            "Tempor incididunt",
-            "Lorem ipsum dolor",
-            "Incididunt ut labore"
+            "Uitsluitend de beste kwaliteit hardhout",
+            "Kozijnen op ambachtelijke wijze gemaakt",
+            "Gespecialiseerd in houten kozijnen, ramen én deuren"
         ],
         "Why2": [
-            "Aliquip ex ea commodo",
-            "Lorem ipsum dolor",
-            "Exercitation ullamco",
-            "Lorem ipsum dolor"
+            "Vrijblijvende offertes",
+            "Leveren én plaatsen",
+            "Geweldige service door vakmensen"
         ]
     },
     "Services": [{
