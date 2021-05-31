@@ -75,6 +75,12 @@ hr {
 	margin-top: -28px;
 }
 
+@media (max-width:960px) {
+	#root {
+		width: 120%;
+	}
+}
+
 #menu.navbar-default {
 	background-color: #fff;
 	border-color: rgba(231, 231, 231, 0);
