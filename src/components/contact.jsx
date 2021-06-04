@@ -23,8 +23,8 @@ export const Contact = (props) => {
       )
       .then(
         (result) => {
-          console.log(result.text)
           clearState()
+          window.location.reload();
         },
         (error) => {
           console.log(error.text)
