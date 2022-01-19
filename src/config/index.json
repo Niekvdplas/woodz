@@ -36,25 +36,10 @@
       "href": "mailto:niekvanderplas1@gmail.com"
     }
   },
-  "product": {
-    "title": "React landing page 2021",
-    "items": [
-      {
-        "title": "A plug n play template",
-        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
-        "img": "/assets/images/product1.jpg"
-      },
-      {
-        "title": "Make it your own!",
-        "description": "Play around with the theme.ts file and configure the color palette to match the branding of your company! If you're feeling wild, maybe change some tailwind css as well!",
-        "img": "/assets/images/product2.jpg"
-      }
-    ]
-  },
   "about": {
-    "title": "Latest & greatest ",
-    "subtitle": "All the best technologies out there!",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "title": " Over ons ",
+    "subtitle": "",
+    "description": "Ons bedrijf maakt kozijnen voor vaste opdrachtgevers in de bouw en voor particulieren. Daarnaast verzorgen wij ook ambachtelijk timmerwerk. Kwaliteit staat bij ons voorop. Machinale bewerking van houten kozijnen, ramen en deuren is waar wij in excelleren.",
     "items": [
       {
         "name": "React.js",
@@ -75,6 +60,21 @@
         "name": "Typescript",
         "description": "TypeScript is a programming language developed and maintained by Microsoft.",
         "icon": "/assets/images/ts.png"
+      }
+    ]
+  },
+  "product": {
+    "title": "React landing page 2021",
+    "items": [
+      {
+        "title": "A plug n play template",
+        "description": "Just edit the config.json file with details about your company and voila your beautiful state of the art landing page is ready to go live! Remember to also update your assets, add any images you want to show to /assets/images and link them in the config.json",
+        "img": "/assets/images/product1.jpg"
+      },
+      {
+        "title": "Make it your own!",
+        "description": "Play around with the theme.ts file and configure the color palette to match the branding of your company! If you're feeling wild, maybe change some tailwind css as well!",
+        "img": "/assets/images/product2.jpg"
       }
     ]
   },
