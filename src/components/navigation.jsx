@@ -1,5 +1,9 @@
+import {
+  Link
+} from 'react-router-dom';
 export const Navigation = (props) => {
   return (
+  
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
         <div className='navbar-header'>
@@ -26,17 +30,17 @@ export const Navigation = (props) => {
         >
           <ul className='nav navbar-nav navbar-right'>
             <li>
-              <a href='#about' className='page-scroll'>
+              <a href='/#about' className='page-scroll'>
                 Over ons
               </a>
             </li>
             <li>
-              <a href='#services' className='page-scroll'>
+              <a href='/#services' className='page-scroll'>
                 Diensten
               </a>
             </li>
             <li>
-              <a href='#portfolio' className='page-scroll'>
+              <a href='/#portfolio' className='page-scroll'>
                 Portfolio
               </a>
             </li>
@@ -48,14 +52,19 @@ export const Navigation = (props) => {
             </li>
             */}
             <li>
-              <a href='#team' className='page-scroll'>
+              <a href='/#team' className='page-scroll'>
                 Team
               </a>
             </li>
             <li>
-              <a href='#contact' className='page-scroll'>
+              <a href='/#contact' className='page-scroll'>
                 Contact
               </a>
+            </li>
+            <li>
+              <Link to='/shop' className='page-scroll'>
+                Kozijnen samenstellen
+              </Link>
             </li>
           </ul>
         </div>
