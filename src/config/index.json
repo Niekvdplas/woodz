@@ -29,11 +29,11 @@
     "img": "/assets/images/intro-bg.jpg",
     "primaryAction": {
       "text": "Leer meer",
-      "href": "#Over ons"
+      "href": "#about"
     },
     "secondaryAction": {
-      "text": "Email us",
-      "href": "mailto:issaafakattan@gmail.com?subject=I like react landing page!"
+      "text": "Email ons",
+      "href": "mailto:niekvanderplas1@gmail.com"
     }
   },
   "product": {
@@ -51,7 +51,7 @@
       }
     ]
   },
-  "features": {
+  "about": {
     "title": "Latest & greatest ",
     "subtitle": "All the best technologies out there!",
     "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
@@ -117,7 +117,7 @@
       }
     ]
   },
-  "about": {
+  "aboutd": {
     "sections": [
       {
         "name": "Something",
