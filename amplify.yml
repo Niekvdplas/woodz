@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - yarn
+        - yarn build-prod
   artifacts:
     baseDirectory: build
     files:
