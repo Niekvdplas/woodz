@@ -14,11 +14,12 @@ const About = () => {
           >
             {title}
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            {subtitle}
-          </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             {description}
+          </p>
+          <br />
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            {subtitle}
           </p>
         </div>
 
@@ -27,14 +28,19 @@ const About = () => {
             {featuresList.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt>
-                  <div
-                    className={`absolute flex items-center justify-center h-12 w-12 rounded-md bg-background text-tertiary border-primary border-4`}
-                  >
-                    <img
-                      className={`inline-block h-6 w-6 rounded-full`}
-                      src={feature.icon}
-                      alt={feature.name}
-                    />
+                  <div className={`absolute flex items-center justify-center`}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
                   </div>
                   <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
                     {feature.name}
