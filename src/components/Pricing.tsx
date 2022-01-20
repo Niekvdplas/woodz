@@ -28,14 +28,11 @@ const Pricing = () => {
               key={i}
             >
               <div className="flex flex-col">
-                <a href="#">
-                  <img
-                    className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
-                    src={object.photo}
-                    alt="..."
-                  />
-                </a>
-
+                <img
+                  className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100"
+                  src={object.photo}
+                  alt="..."
+                />
                 <div className="text-center mt-6">
                   <h1 className="text-gray-900 text-xl font-bold mb-1">
                     {object.name}
@@ -43,32 +40,6 @@ const Pricing = () => {
 
                   <div className="text-gray-700 font-light mb-2">
                     {object.title}
-                  </div>
-
-                  <div
-                    className="flex items-center justify-center opacity-50 hover:opacity-100
-                          transition-opacity duration-300"
-                  >
-                    <a
-                      href="#"
-                      className="flex rounded-full hover:bg-indigo-50 h-10 w-10"
-                    >
-                      <i className="mdi mdi-linkedin text-indigo-500 mx-auto mt-2"></i>
-                    </a>
-
-                    <a
-                      href="#"
-                      className="flex rounded-full hover:bg-blue-50 h-10 w-10"
-                    >
-                      <i className="mdi mdi-twitter text-blue-300 mx-auto mt-2"></i>
-                    </a>
-
-                    <a
-                      href="#"
-                      className="flex rounded-full hover:bg-orange-50 h-10 w-10"
-                    >
-                      <i className="mdi mdi-instagram text-orange-400 mx-auto mt-2"></i>
-                    </a>
                   </div>
                 </div>
               </div>

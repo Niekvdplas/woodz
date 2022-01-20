@@ -58,6 +58,12 @@ const Menu = () => {
                   {item.name}
                 </Link>
               ))}
+              <Link
+                to="/shop"
+                className="font-medium text-gray-500 hover:text-gray-900"
+              >
+                Shop
+              </Link>
             </div>
           </nav>
         </div>
