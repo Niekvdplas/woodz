@@ -6,16 +6,16 @@
   "navigation": [
     {
       "name": "Over ons",
-      "href": "about"
+      "href": "#about"
     },
     {
       "name": "Diensten",
-      "href": "diensten"
+      "href": "#diensten"
     },
 
     {
       "name": "Team",
-      "href": "team"
+      "href": "#team"
     }
   ],
   "mainHero": {

@@ -1,15 +1,14 @@
 import React from 'react';
 
 import About from '../components/About';
-import Aboutd from '../components/Aboutd';
-import Analytics from '../components/Analytics';
 import Canvas from '../components/Canvas';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
+import LandingPage from '../components/LandingPage';
+import LandingPageImage from '../components/LandingPageImage';
 import LazyShow from '../components/LazyShow';
-import MainHero from '../components/MainHero';
-import MainHeroImage from '../components/MainHeroImage';
-import Pricing from '../components/Pricing';
-import Product from '../components/Product';
+import Services from '../components/Services';
+import Team from '../components/Team';
 
 const App = () => {
   return (
@@ -20,10 +19,10 @@ const App = () => {
             className={`relative z-10 pb-8 bg-background sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`}
           >
             <Header />
-            <MainHero />
+            <LandingPage />
           </div>
         </div>
-        <MainHeroImage />
+        <LandingPageImage />
       </div>
       <Canvas />
       <LazyShow>
@@ -34,20 +33,19 @@ const App = () => {
       </LazyShow>
       <LazyShow>
         <>
-          <Product />
+          <Services />
           <Canvas />
         </>
       </LazyShow>
       <LazyShow>
-        <Pricing />
+        <Team />
       </LazyShow>
       <LazyShow>
         <>
           <Canvas />
-          <Aboutd />
+          <Footer />
         </>
       </LazyShow>
-      <Analytics />
     </div>
   );
 };

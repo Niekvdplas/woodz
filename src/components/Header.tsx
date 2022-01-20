@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'react-scroll';
+import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 
 import config from '../config/index.json';
 
@@ -46,7 +47,7 @@ const Menu = () => {
             </div>
             <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
               {navigation.map((item) => (
-                <Link
+                <ScrollLink
                   spy={true}
                   active="active"
                   smooth={true}
@@ -56,14 +57,9 @@ const Menu = () => {
                   className="font-medium text-gray-500 hover:text-gray-900"
                 >
                   {item.name}
-                </Link>
+                </ScrollLink>
               ))}
-              <Link
-                to="/shop"
-                className="font-medium text-gray-500 hover:text-gray-900"
-              >
-                Shop
-              </Link>
+              <Link href="/shop">Shop</Link>
             </div>
           </nav>
         </div>

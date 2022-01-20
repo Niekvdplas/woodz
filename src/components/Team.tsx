@@ -7,7 +7,7 @@ const Pricing = () => {
   const { team, title } = pricing;
 
   return (
-    <section className={`bg-background py-8`} id="team">
+    <section className={`bg-background py-8`} id="#team">
       <div className={`container mx-auto px-2 pt-4 pb-12 text-primary`}>
         <h1
           className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
