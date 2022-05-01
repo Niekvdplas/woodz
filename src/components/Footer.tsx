@@ -24,7 +24,7 @@ const Aboutd = () => {
           <img src={logo} alt={companyName} className="w-50 h-16" />
         </div>
         <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-4 h-12">
-          <a href={`http://maps.google.com/?q=term${firstSection?.href}`}>
+          <a href={`http://maps.google.com/?q=${firstSection?.href}`}>
             <div className="text-primary leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
               <div
                 style={{
