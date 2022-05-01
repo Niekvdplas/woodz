@@ -6,7 +6,7 @@ const About = () => {
   const { about } = config;
   const { title, subtitle, description, items: featuresList } = about;
   return (
-    <div className={`py-12 bg-background`} id="#about">
+    <div className={`py-12 bg-background`} id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2

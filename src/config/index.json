@@ -6,16 +6,20 @@
   "navigation": [
     {
       "name": "Over ons",
-      "href": "#about"
+      "href": "about"
     },
     {
       "name": "Diensten",
-      "href": "#diensten"
+      "href": "diensten"
     },
 
     {
       "name": "Team",
-      "href": "#team"
+      "href": "team"
+    },
+    {
+      "name": "Contact",
+      "href": "contact"
     }
   ],
   "mainHero": {
@@ -129,7 +133,7 @@
       }
     ]
   },
-  "aboutd": {
+  "contactinfo": {
     "sections": [
       {
         "svg": "location-marker",
