@@ -25,7 +25,7 @@ const Aboutd = () => {
         </div>
         <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-4 h-12">
           <a href={`http://maps.google.com/?q=term${firstSection?.href}`}>
-            <div className="text-primary leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
+            <div className="leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
               <div
                 style={{
                   display: 'flex',
@@ -40,7 +40,7 @@ const Aboutd = () => {
             </div>
           </a>
           <a href={`tel:${secondSection?.href}`}>
-            <div className="text-primary leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
+            <div className="leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
               <div
                 style={{
                   display: 'flex',
@@ -55,8 +55,8 @@ const Aboutd = () => {
               {secondSection?.href}
             </div>
           </a>
-          <a href="mailto:niekvanderplas1@gmail.com">
-            <div className="text-primary leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
+          <a href={`mailto:${thirdSection?.href}`}>
+            <div className="leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
               <div
                 style={{
                   display: 'flex',
