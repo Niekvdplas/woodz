@@ -25,7 +25,7 @@
   "mainHero": {
     "title": "Welkom bij",
     "subtitle": "Woodz kozijnen",
-    "description": "Wij zijn een jong dynamisch bedrijf dat uw complete kozijnen zorg uit handen neemt.",
+    "description": "Wij zijn een jong, dynamisch bedrijf dat uw complete kozijnen zorg uit handen neemt.",
     "img": "/assets/images/intro-bg.jpg",
     "primaryAction": {
       "text": "Leer meer",
@@ -39,7 +39,7 @@
   "about": {
     "title": " Over ons ",
     "subtitle": "Waarom zou u voor ons kiezen?",
-    "description": "Ons bedrijf maakt kozijnen voor vaste opdrachtgevers in de bouw en voor particulieren. Daarnaast verzorgen wij ook ambachtelijk timmerwerk. Kwaliteit staat bij ons voorop. Machinale bewerking van houten kozijnen, ramen en deuren is waar wij in excelleren.",
+    "description": "Ons bedrijf maakt kozijnen voor vaste opdrachtgevers in de bouw en voor particulieren. Daarnaast verzorgen wij ook ambachtelijk timmerwerk. Kwaliteit staat bij ons voorop. Machinale bewerking van <b> houten </b> kozijnen, ramen en deuren is waar wij in excelleren.",
     "items": [
       {
         "name": "Uitsluitend de beste kwaliteit hardhout",
