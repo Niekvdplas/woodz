@@ -12,7 +12,10 @@
       "name": "Diensten",
       "href": "diensten"
     },
-
+    {
+      "name": "Portfolio",
+      "href": "portfolio"
+    },
     {
       "name": "Team",
       "href": "team"
