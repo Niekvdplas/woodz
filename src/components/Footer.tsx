@@ -36,7 +36,7 @@ const Aboutd = () => {
                 <LocationMarkerIcon className="w-5 h-5"></LocationMarkerIcon>
                 <span>&nbsp;{firstSection?.name}</span>
               </div>
-              {firstSection?.href}
+              {firstSection?.location}
             </div>
           </a>
           <a href={`tel:${secondSection?.href}`}>

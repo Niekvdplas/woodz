@@ -24,7 +24,7 @@
   ],
   "mainHero": {
     "title": "Welkom bij",
-    "subtitle": "Woodz kozijnen",
+    "subtitle": "Woodz Kozijnen",
     "description": "Wij zijn een jong, dynamisch bedrijf dat uw complete kozijnen zorg uit handen neemt.",
     "img": "/assets/images/intro-bg.jpg",
     "primaryAction": {
@@ -138,7 +138,8 @@
       {
         "svg": "location-marker",
         "name": "Adres",
-        "href": "Maessloot 8, 2231 PB, Rijnsburg"
+        "location": "Maessloot 8, 2231 PX, Rijnsburg",
+        "href": "Woodz Kozijnen B.V."
       },
       {
         "name": "Telefoon",
@@ -148,11 +149,6 @@
         "name": "Email",
         "href": "info@woodzkozijnen.nl"
       }
-    ],
-    "socialMedia": {
-      "github": "https://github.com/issaafalkattan",
-      "twitter": "https://twitter.com/issaafkattan",
-      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
-    }
+    ]
   }
 }

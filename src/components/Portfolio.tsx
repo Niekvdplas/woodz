@@ -3,6 +3,16 @@ import React from 'react';
 const Portfolio = () => {
   return (
     <section className={`bg-background py-8`} id="portfolio">
+      <h1
+        className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
+      >
+        Portfolio
+      </h1>
+      <div className={`w-full mb-4`}>
+        <div
+          className={`h-1 mx-auto bg-primary w-64 opacity-25 my-0 py-0 rounded-t`}
+        ></div>
+      </div>
       <div id="portfolio" className="text-center">
         <div className="portfolio-items">
           <div
