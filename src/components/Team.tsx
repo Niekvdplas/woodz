@@ -7,8 +7,8 @@ const Team = () => {
   const { team, title } = pricing;
 
   return (
-    <section className={`bg-background py-8`} id="team">
-      <div className={`container mx-auto px-2 pt-4 pb-12 text-primary`}>
+    <section className={`bg-background pt-8`} id="team">
+      <div className={`container mx-auto px-2 pt-4 text-primary`}>
         <h1
           className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
         >
@@ -20,11 +20,11 @@ const Team = () => {
           ></div>
         </div>
         <div
-          className={`flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4`}
+          className={`flex flex-wrap lg:flex-row justify-center pt-12 my-12 sm:my-4`}
         >
           {team.map((object, i) => (
             <div
-              className="w-full md:w-6/12 lg:w-3/12 mb-6 px-6 sm:px-6 lg:px-4"
+              className="w-full md:w-6/12 lg:w-6/12 mb-6 px-6 sm:px-6 lg:px-4 xl:w-2/12"
               key={i}
             >
               <div className="flex flex-col">

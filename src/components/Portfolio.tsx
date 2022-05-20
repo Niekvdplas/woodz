@@ -13,7 +13,7 @@ const Portfolio = () => {
           className={`h-1 mx-auto bg-primary w-64 opacity-25 my-0 py-0 rounded-t`}
         ></div>
       </div>
-      <div id="portfolio" className="text-center">
+      <div id="portfolio" className="text-center my-12">
         <div className="portfolio-items">
           <div
             className="grid md:grid-cols-1 sm:grid-cols-1 xl:grid-cols-3 gap-8 content-center"
