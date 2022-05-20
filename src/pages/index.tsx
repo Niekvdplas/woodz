@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import LandingPage from '../components/LandingPage';
 import LandingPageImage from '../components/LandingPageImage';
 import LazyShow from '../components/LazyShow';
+import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
 import Team from '../components/Team';
 
@@ -34,6 +35,12 @@ const App = () => {
       <LazyShow>
         <>
           <Services />
+          <Canvas />
+        </>
+      </LazyShow>
+      <LazyShow>
+        <>
+          <Portfolio />
           <Canvas />
         </>
       </LazyShow>

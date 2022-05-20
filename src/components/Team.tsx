@@ -2,7 +2,7 @@ import React from 'react';
 
 import config from '../config/index.json';
 
-const Pricing = () => {
+const Team = () => {
   const { pricing } = config;
   const { team, title } = pricing;
 
@@ -51,4 +51,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default Team;

@@ -3,7 +3,7 @@ import React from 'react';
 import config from '../config/index.json';
 import Divider from './Divider';
 
-const Product = () => {
+const Services = () => {
   const { product } = config;
   const [firstItem, secondItem, thirdItem] = product.items;
 
@@ -81,4 +81,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Services;
