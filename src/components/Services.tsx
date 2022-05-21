@@ -149,7 +149,7 @@ const Services = () => {
                   src={image.imageUrl}
                   style={{
                     display: 'block',
-                    maxHeight: '650px',
+                    maxHeight: '600px',
                     padding: '5px',
                   }}
                   alt={image.alt}
