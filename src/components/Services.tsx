@@ -101,7 +101,7 @@ const Services = () => {
                 setCategories(cats);
               }}
               autoPlay
-              autoPlaySpeed={10000}
+              autoPlaySpeed={5000}
               centerMode={false}
               className=""
               containerClass="container-with-dots"
@@ -149,6 +149,10 @@ const Services = () => {
                   src={image.imageUrl}
                   style={{
                     display: 'block',
+                    margin: 'auto',
+                    alignItems: 'center',
+                    flex: 1,
+                    justifyContent: 'center',
                     maxHeight: '550px',
                     padding: '5px',
                   }}
