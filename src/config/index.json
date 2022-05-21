@@ -5,7 +5,7 @@
   },
   "navigation": [
     {
-      "name": "Over ons",
+      "name": "Over",
       "href": "about"
     },
     {
@@ -50,7 +50,7 @@
         "icon": "/assets/images/react.png"
       },
       {
-        "name": "Kozijnen op ambachtelijke wijze gemaakt",
+        "name": "Kozijnen op ambachtelijke en machinale wijze gemaakt",
         "description": "Evt. verdere uitleg",
         "icon": "/assets/images/tailwindcss.svg"
       },
@@ -65,7 +65,7 @@
         "icon": "/assets/images/ts.png"
       },
       {
-        "name": "Leveren én plaatsen",
+        "name": "Leveren",
         "description": "Evt. verdere uitleg",
         "icon": "/assets/images/ts.png"
       },
@@ -80,19 +80,25 @@
     "title": "Wat wij voor u kunnen betekenen",
     "items": [
       {
-        "title": "Nieuwbouw",
+        "title": "Kozijnen",
         "description": "tekst",
-        "svg": "/assets/images/Nieuwbouw.svg"
-      },
-      {
-        "title": "Verbouw",
-        "description": "tekst",
-        "svg": "/assets/images/Verbouw.svg"
-      },
-      {
-        "title": "Restauratie",
-        "description": "tekst",
-        "svg": "/assets/images/Restauratie.svg"
+        "photos": [
+          {
+            "imageUrl": "assets/images/services/door.jpg",
+            "alt": "Deur",
+            "category": 0
+          },
+          {
+            "imageUrl": "assets/images/services/frames.jpg",
+            "alt": "Kozijnen",
+            "category": 1
+          },
+          {
+            "imageUrl": "assets/images/services/storefront.jpg",
+            "alt": "Prachtige deur",
+            "category": 0
+          }
+        ]
       }
     ]
   },
