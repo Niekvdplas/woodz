@@ -62,7 +62,7 @@ const Services = () => {
 
   return (
     <section className={`bg-background py-8`} id="diensten">
-      <div className={`container max-w-5xl mx-auto m-8`}>
+      <div className={`container max-w-5xl mx-auto m-2`}>
         <h1
           className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
         >
@@ -149,7 +149,7 @@ const Services = () => {
                   src={image.imageUrl}
                   style={{
                     display: 'block',
-                    maxHeight: '600px',
+                    maxHeight: '550px',
                     padding: '5px',
                   }}
                   alt={image.alt}
