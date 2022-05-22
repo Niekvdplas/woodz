@@ -8,7 +8,7 @@ import {
 
 import config from '../config/index.json';
 
-const Aboutd = () => {
+const Footer = () => {
   const { company, contactinfo } = config;
   const { logo, name: companyName } = company;
   const { sections } = contactinfo;
@@ -17,14 +17,18 @@ const Aboutd = () => {
   return (
     <div
       id="contact"
-      className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-12"
+      className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 pt-12"
     >
       <div className="flex flex-col items-center justify-center">
         <div>
           <img src={logo} alt={companyName} className="w-50 h-16" />
         </div>
         <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-4 h-12">
-          <a href={`http://maps.google.com/?q=${firstSection?.href}`}>
+          <a
+            href={`http://maps.google.com/?q=${firstSection?.href}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
               <div
                 style={{
@@ -71,9 +75,7 @@ const Aboutd = () => {
             </div>
           </a>
         </div>
-        <br />
-        <br />
-        <div className="flex items-center mt-6">
+        <div className="flex items-center mt-12 mb-1">
           <p className="mt-6 text-xs lg:text-sm leading-none text-gray-900 dark:text-gray-50">
             &copy; {new Date().getFullYear()} designed by Niek van der Plas
           </p>
@@ -82,4 +84,4 @@ const Aboutd = () => {
     </div>
   );
 };
-export default Aboutd;
+export default Footer;

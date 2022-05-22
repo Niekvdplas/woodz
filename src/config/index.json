@@ -46,32 +46,26 @@
     "items": [
       {
         "name": "Uitsluitend de beste kwaliteit hardhout",
-        "description": "",
         "icon": "/assets/images/react.png"
       },
       {
-        "name": "Kozijnen op ambachtelijke en machinale manier gemaakt",
-        "description": "",
+        "name": "Kozijnen op ambachtelijke en machinale wijze gemaakt",
         "icon": "/assets/images/tailwindcss.svg"
       },
       {
         "name": "Gespecialiseerd in houten kozijnen, ramen én deuren",
-        "description": "",
         "icon": "/assets/images/nextjs.svg"
       },
       {
         "name": "Vrijblijvende offertes",
-        "description": "",
         "icon": "/assets/images/ts.png"
       },
       {
         "name": "Leveren",
-        "description": "",
         "icon": "/assets/images/ts.png"
       },
       {
         "name": "Geweldige service door vakmensen",
-        "description": "",
         "icon": "/assets/images/ts.png"
       }
     ]
@@ -80,19 +74,25 @@
     "title": "Wat wij voor u kunnen betekenen",
     "items": [
       {
-        "title": "Nieuwbouw",
+        "title": "Kozijnen",
         "description": "tekst",
-        "svg": "/assets/images/Nieuwbouw.svg"
-      },
-      {
-        "title": "Verbouw",
-        "description": "tekst",
-        "svg": "/assets/images/Verbouw.svg"
-      },
-      {
-        "title": "Restauratie",
-        "description": "tekst",
-        "svg": "/assets/images/Restauratie.svg"
+        "photos": [
+          {
+            "imageUrl": "assets/images/services/door.jpg",
+            "alt": "Deur",
+            "category": 0
+          },
+          {
+            "imageUrl": "assets/images/services/frames.jpg",
+            "alt": "Kozijnen",
+            "category": 1
+          },
+          {
+            "imageUrl": "assets/images/services/storefront.jpg",
+            "alt": "Prachtige deur",
+            "category": 0
+          }
+        ]
       }
     ]
   },
