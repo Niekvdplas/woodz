@@ -5,7 +5,7 @@
   },
   "navigation": [
     {
-      "name": "Over ons",
+      "name": "Over",
       "href": "about"
     },
     {
@@ -46,32 +46,32 @@
     "items": [
       {
         "name": "Uitsluitend de beste kwaliteit hardhout",
-        "description": "Evt. verdere uitleg",
+        "description": "",
         "icon": "/assets/images/react.png"
       },
       {
-        "name": "Kozijnen op ambachtelijke wijze gemaakt",
-        "description": "Evt. verdere uitleg",
+        "name": "Kozijnen op ambachtelijke en machinale manier gemaakt",
+        "description": "",
         "icon": "/assets/images/tailwindcss.svg"
       },
       {
         "name": "Gespecialiseerd in houten kozijnen, ramen én deuren",
-        "description": "Evt. verdere uitleg",
+        "description": "",
         "icon": "/assets/images/nextjs.svg"
       },
       {
         "name": "Vrijblijvende offertes",
-        "description": "Evt. verdere uitleg",
+        "description": "",
         "icon": "/assets/images/ts.png"
       },
       {
-        "name": "Leveren én plaatsen",
-        "description": "Evt. verdere uitleg",
+        "name": "Leveren",
+        "description": "",
         "icon": "/assets/images/ts.png"
       },
       {
         "name": "Geweldige service door vakmensen",
-        "description": "Evt. verdere uitleg",
+        "description": "",
         "icon": "/assets/images/ts.png"
       }
     ]
@@ -115,11 +115,6 @@
         "photo": "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
       },
       {
-        "name": "Justin ..",
-        "title": "?",
-        "photo": "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
-      },
-      {
         "name": "Lucas van der Krogt",
         "title": "?",
         "photo": "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
@@ -130,7 +125,7 @@
         "photo": "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
       },
       {
-        "name": "Nico",
+        "name": "Angelique",
         "title": "?",
         "photo": "https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
       }
