@@ -163,7 +163,12 @@ const Services = () => {
           </div>
           <div
             className="text-center mt-4 max-w-2xl text-sm md:text-xl text-gray-500 lg:mx-auto"
-            style={{ height: '80%' }}
+            style={{
+              height: '80%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
           >
             {description}
           </div>
