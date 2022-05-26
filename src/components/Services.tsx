@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 import Carousel from 'react-multi-carousel';
-
 import 'react-multi-carousel/lib/styles.css';
+import { Button } from 'reactstrap';
 
 import config from '../config/index.json';
 import Divider from './Divider';
@@ -10,6 +10,7 @@ import Divider from './Divider';
 const Services = () => {
   let shown = -1;
   const { product } = config;
+  const carouselRef = useRef<any>();
   const map = {
     0: 'Deuren',
     1: 'Kozijnen',
@@ -56,9 +57,30 @@ const Services = () => {
       Volgende.....
     </h2>,
   ];
-  const [categories, setCategories] = useState(reset);
+  const initial = [
+    <h1
+      key="0"
+      className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-primary`}
+    >
+      Deuren
+    </h1>,
+  ].concat(reset.slice(1, 6));
+  const [categories, setCategories] = useState(initial);
   const [description, setDescription] = useState('Hier kan wat uitleg over: ');
   const [firstItem] = product.items;
+
+  function getRandomPhoto(category: number, current: number) {
+    const photos = firstItem?.photos;
+    const categoryPhotos = photos?.filter((element) => {
+      return (
+        element.category === category && photos.indexOf(element) !== current - 2
+      );
+    });
+    const picked =
+      categoryPhotos![Math.floor(Math.random() * categoryPhotos!.length)];
+    const index = photos!.indexOf(picked!);
+    return index + 2;
+  }
 
   return (
     <section className={`bg-background py-8`} id="diensten">
@@ -77,9 +99,42 @@ const Services = () => {
         </h1>
         <Divider />
         <div className={`grid grid-cols-3 gap-4`}>
-          {categories[0]}
-          <div>{categories[1]}</div>
-          <div>{categories[2]}</div>
+          <Button
+            onClick={() =>
+              carouselRef?.current?.goToSlide(
+                getRandomPhoto(0, carouselRef?.current.state.currentSlide),
+                {
+                  skipBeforeChange: true,
+                }
+              )
+            }
+          >
+            {categories[0]}
+          </Button>
+          <Button
+            onClick={() =>
+              carouselRef.current!.goToSlide(
+                getRandomPhoto(1, carouselRef?.current.state.currentSlide),
+                {
+                  skipBeforeChange: true,
+                }
+              )
+            }
+          >
+            {categories[1]}
+          </Button>
+          <Button
+            onClick={() =>
+              carouselRef?.current?.goToSlide(
+                getRandomPhoto(2, carouselRef?.current.state.currentSlide),
+                {
+                  skipBeforeChange: true,
+                }
+              )
+            }
+          >
+            {categories[2]}
+          </Button>
           <div className="col-span-2">
             <Carousel
               additionalTransfrom={0}
@@ -112,6 +167,7 @@ const Services = () => {
               keyBoardControl
               minimumTouchDrag={80}
               renderDotsOutside={false}
+              ref={carouselRef}
               responsive={{
                 desktop: {
                   breakpoint: {
@@ -172,9 +228,33 @@ const Services = () => {
           >
             {description}
           </div>
-          <div>{categories[3]}</div>
-          <div>{categories[4]}</div>
-          <div>{categories[5]}</div>
+          <Button
+            onClick={() =>
+              carouselRef?.current?.goToSlide(
+                getRandomPhoto(3, carouselRef?.current.state.currentSlide)
+              )
+            }
+          >
+            {categories[3]}
+          </Button>
+          <Button
+            onClick={() =>
+              carouselRef?.current?.goToSlide(
+                getRandomPhoto(4, carouselRef?.current.state.currentSlide)
+              )
+            }
+          >
+            {categories[4]}
+          </Button>
+          <Button
+            onClick={() =>
+              carouselRef?.current?.goToSlide(
+                getRandomPhoto(5, carouselRef?.current.state.currentSlide)
+              )
+            }
+          >
+            {categories[5]}
+          </Button>
         </div>
       </div>
     </section>
