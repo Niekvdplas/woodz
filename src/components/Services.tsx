@@ -72,12 +72,19 @@ const Services = () => {
   function getRandomPhoto(category: number, current: number) {
     const photos = firstItem?.photos;
     const categoryPhotos = photos?.filter((element) => {
-      return (
-        element.category === category && photos.indexOf(element) !== current - 2
-      );
+      return element.category === category;
     });
-    const picked =
-      categoryPhotos![Math.floor(Math.random() * categoryPhotos!.length)];
+    if (categoryPhotos?.length === 1) {
+      return photos?.indexOf(categoryPhotos[0]!)! + 2;
+    }
+    const notSelf = categoryPhotos?.filter((element) => {
+      return photos?.indexOf(element) !== current - 2;
+    });
+    const picked = notSelf![Math.floor(Math.random() * categoryPhotos!.length)];
+    if (picked === undefined) {
+      return photos?.indexOf(categoryPhotos![0]!)! + 2;
+    }
+
     const index = photos!.indexOf(picked!);
     return index + 2;
   }
