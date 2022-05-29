@@ -3,10 +3,10 @@ import React from 'react';
 import Head from 'next/head';
 
 import '../styles/main.css';
+import { Counter } from '../components/Timer';
 
 function MyApp({ Component, pageProps }: any) {
-  const date = '06-10-2022';
-  const releaseDate = new Date(date);
+  const releaseDate = new Date(2022, 5, 6, 19, 0, 0, 0);
   const today = new Date();
   return (
     <>
@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }: any) {
                   78
                 </p>
               </div>
+              <Counter />
             </div>
           </div>
         </div>
