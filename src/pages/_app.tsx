@@ -6,7 +6,7 @@ import '../styles/main.css';
 import { Counter } from '../components/Timer';
 
 function MyApp({ Component, pageProps }: any) {
-  const releaseDate = new Date(2022, 5, 6, 19, 0, 0, 0);
+  const releaseDate = new Date(2022, 5, 10, 19, 0, 0, 0);
   const today = new Date();
   return (
     <>
