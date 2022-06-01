@@ -26,6 +26,7 @@ export const calculateTimeLeft = () => {
       seconds: Math.floor((difference / 1000) % 60),
     };
   } else {
+    window.location.reload();
     timeLeft = {
       days: 0,
       hours: 0,
