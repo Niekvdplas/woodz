@@ -14,7 +14,7 @@ export type TimeLeft = {
 };
 
 export const calculateTimeLeft = () => {
-  const difference = +new Date(2022, 5, 1, 23, 47, 0, 0) - +new Date();
+  const difference = +new Date(2022, 5, 1, 23, 55, 0, 0) - +new Date();
 
   let timeLeft: TimeLeft = {} as TimeLeft;
 
@@ -26,7 +26,6 @@ export const calculateTimeLeft = () => {
       seconds: Math.floor((difference / 1000) % 60),
     };
   } else {
-    window.location.reload();
     timeLeft = {
       days: 0,
       hours: 0,
