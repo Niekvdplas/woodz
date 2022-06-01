@@ -14,9 +14,13 @@ export type TimeLeft = {
 };
 
 export const calculateTimeLeft = () => {
-  const difference = +new Date(2022, 5, 1, 23, 55, 0, 0) - +new Date();
+  const difference = +new Date(2022, 5, 2, 1, 4, 0, 0) - +new Date();
 
   let timeLeft: TimeLeft = {} as TimeLeft;
+
+  if (difference === 0) {
+    window.location.reload();
+  }
 
   if (difference > 0) {
     timeLeft = {

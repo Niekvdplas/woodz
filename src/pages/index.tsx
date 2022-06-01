@@ -14,7 +14,7 @@ import { Counter } from '../components/Timer';
 import config from '../config/index.json';
 
 const App = () => {
-  const releaseDate = new Date(2022, 5, 1, 23, 55, 0, 0);
+  const releaseDate = new Date(2022, 5, 2, 1, 4, 0, 0);
   const today = new Date();
   const { company } = config;
   const { logo } = company;
