@@ -16,7 +16,7 @@ import { TimeLeft } from '../utils/utils';
 
 function App() {
   const calculateTimeLeft = () => {
-    const difference = +new Date(2022, 5, 2, 10, 31, 0, 0) - +new Date();
+    const difference = +new Date(2022, 5, 2, 10, 34, 0, 0) - +new Date();
 
     let timeLeft: TimeLeft = {} as TimeLeft;
 
@@ -43,7 +43,7 @@ function App() {
   const { logo } = company;
 
   useEffect(() => {
-    if (+new Date(2022, 5, 2, 10, 31, 0, 0) - +new Date() > 0)
+    if (+new Date(2022, 5, 2, 10, 34, 0, 0) - +new Date() > 0)
       setTimeout(() => {
         setTimeLeft(calculateTimeLeft());
       }, 1000);
@@ -94,28 +94,22 @@ function App() {
   );
 
   const countdown = (
-    <div className="flex items-center justify-center h-screen bg-gray-200">
-      <div className="container">
-        <div className="bg-white rounded-lg shadow-lg p-5 md:p-20 mx-2">
-          <div className="text-center">
-            <img
-              alt="logo"
-              src={logo}
-              style={{
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                width: '50%',
-              }}
-            />
-            <h3 className="text-xl md:text-3xl mt-10">Onder constructie</h3>
-            <p className="text-md md:text-xl mt-10">
-              Vragen? mail met info@woodzkozijnen.nl of bel Bas- 0653942278
-            </p>
-          </div>
-          <Counter />
-        </div>
-      </div>
+    <div className="text-center">
+      <img
+        alt="logo"
+        src={logo}
+        style={{
+          display: 'block',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          width: '50%',
+        }}
+      />
+      <h3 className="text-xl md:text-3xl mt-10">Onder constructie</h3>
+      <p className="text-md md:text-xl mt-10">
+        Vragen? mail met info@woodzkozijnen.nl of bel Bas- 0653942278
+      </p>
+      <Counter />
     </div>
   );
 
