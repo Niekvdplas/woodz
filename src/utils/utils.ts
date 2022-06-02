@@ -14,7 +14,7 @@ export type TimeLeft = {
 };
 
 export const calculateTimeLeft = () => {
-  const difference = +new Date(2022, 5, 2, 10, 10, 0, 0) - +new Date();
+  const difference = +new Date(2022, 5, 2, 10, 20, 0, 0) - +new Date();
 
   let timeLeft: TimeLeft = {} as TimeLeft;
 
