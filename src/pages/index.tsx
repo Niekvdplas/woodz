@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import About from '../components/About';
 import Canvas from '../components/Canvas';
@@ -12,12 +12,42 @@ import Services from '../components/Services';
 import Team from '../components/Team';
 import { Counter } from '../components/Timer';
 import config from '../config/index.json';
+import { TimeLeft } from '../utils/utils';
 
 function App() {
-  const releaseDate = new Date(2022, 5, 2, 9, 56, 0, 0);
-  const today = new Date();
+  const calculateTimeLeft = () => {
+    const difference = +new Date(2022, 5, 2, 10, 10, 0, 0) - +new Date();
+
+    let timeLeft: TimeLeft = {} as TimeLeft;
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    } else {
+      timeLeft = {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      };
+    }
+
+    return timeLeft;
+  };
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const { company } = config;
   const { logo } = company;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  });
+
   const fullsite = (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
       <div className={`relative bg-background`}>
@@ -88,12 +118,13 @@ function App() {
     </div>
   );
 
-  const [show, setShow] = useState(countdown);
-  if (today.getTime() > releaseDate.getTime() && show === countdown) {
-    setShow(fullsite);
-  }
-
-  return show;
+  return (
+    <div className="App">
+      {timeLeft.hours || timeLeft.minutes || timeLeft.seconds
+        ? countdown
+        : fullsite}
+    </div>
+  );
 }
 
 export default App;
