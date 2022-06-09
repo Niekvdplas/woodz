@@ -9,54 +9,22 @@ import Divider from './Divider';
 
 const Services = () => {
   let shown = -1;
-  const { product } = config;
+  const { services } = config;
   const carouselRef = useRef<any>();
-  const map = {
-    0: 'Deuren',
-    1: 'Kozijnen',
-    2: 'Volgende..',
-    3: 'Volgende...',
-    4: 'Volgende....',
-    5: 'Volgende.....',
-  };
-  const reset = [
-    <h2
-      key="0"
-      className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-black`}
-    >
-      Deuren
-    </h2>,
-    <h2
-      key="1"
-      className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-black`}
-    >
-      Kozijnen
-    </h2>,
-    <h2
-      key="2"
-      className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-black`}
-    >
-      Volgende..
-    </h2>,
-    <h2
-      key="3"
-      className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-black`}
-    >
-      Volgende...
-    </h2>,
-    <h2
-      key="4"
-      className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-black`}
-    >
-      Volgende....
-    </h2>,
-    <h2
-      key="5"
-      className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-black`}
-    >
-      Volgende.....
-    </h2>,
-  ];
+  const reset: any = [];
+  const photos: any = [];
+  for (let i = 0; i < services.items.length; i += 1) {
+    reset.push(
+      <h2
+        key={i}
+        className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-black`}
+      >
+        {services.items[i]?.category}
+      </h2>
+    );
+    photos.push(...services.items[i]?.photos!);
+  }
+
   const initial = [
     <h1
       key="0"
@@ -66,14 +34,12 @@ const Services = () => {
     </h1>,
   ].concat(reset.slice(1, 6));
   const [categories, setCategories] = useState(initial);
-  const [description, setDescription] = useState('Hier kan wat uitleg over: ');
-  const [firstItem] = product.items;
+  const [description, setDescription] = useState(
+    services.items[0]?.description
+  );
 
   function getRandomPhoto(category: number, current: number) {
-    const photos = firstItem?.photos;
-    const categoryPhotos = photos?.filter((element) => {
-      return element.category === category;
-    });
+    const categoryPhotos = services.items[category]?.photos;
     if (categoryPhotos?.length === 1) {
       return photos?.indexOf(categoryPhotos[0]!)! + 2;
     }
@@ -95,7 +61,7 @@ const Services = () => {
         <h1
           className={`w-full my-2 text-5xl font-bold leading-tight text-center text-primary`}
         >
-          {product.title.split(' ').map((word, index) => (
+          {services.title.split(' ').map((word, index) => (
             <span
               key={index}
               className={index % 2 ? 'text-primary' : 'text-border'}
@@ -106,60 +72,43 @@ const Services = () => {
         </h1>
         <Divider />
         <div className={`grid grid-cols-3 gap-4`}>
-          <Button
-            onClick={() =>
-              carouselRef?.current?.goToSlide(
-                getRandomPhoto(0, carouselRef?.current.state.currentSlide),
-                {
-                  skipBeforeChange: true,
+          <div></div>
+          {services.items.map((__, index) =>
+            index < Math.floor(services.items.length / 2) ? (
+              <Button
+                onClick={() =>
+                  carouselRef.current!.goToSlide(
+                    getRandomPhoto(
+                      index,
+                      carouselRef?.current.state.currentSlide
+                    ),
+                    {
+                      skipBeforeChange: true,
+                    }
+                  )
                 }
-              )
-            }
-          >
-            {categories[0]}
-          </Button>
-          <Button
-            onClick={() =>
-              carouselRef.current!.goToSlide(
-                getRandomPhoto(1, carouselRef?.current.state.currentSlide),
-                {
-                  skipBeforeChange: true,
-                }
-              )
-            }
-          >
-            {categories[1]}
-          </Button>
-          <Button
-            onClick={() =>
-              carouselRef?.current?.goToSlide(
-                getRandomPhoto(2, carouselRef?.current.state.currentSlide),
-                {
-                  skipBeforeChange: true,
-                }
-              )
-            }
-          >
-            {categories[2]}
-          </Button>
+              >
+                {categories[index]}
+              </Button>
+            ) : null
+          )}
+          <div></div>
           <div className="col-span-2">
             <Carousel
               additionalTransfrom={0}
               arrows
               removeArrowOnDeviceType={['tablet', 'mobile']}
               afterChange={(__, { currentSlide }) => {
-                shown = Number(firstItem?.photos[currentSlide - 2]?.category);
+                shown = Number(photos[currentSlide - 2]?.category);
                 const cats = reset;
                 cats[shown] = (
                   <h1
                     className={`w-full my-2 text-sm md:text-5xl font-bold leading-tight text-center text-primary`}
                   >
-                    {`${(map as any)[shown]}`}
+                    {services.items[shown]?.category}
                   </h1>
                 );
-                setDescription(
-                  `Hier kan wat uitleg over: ${(map as any)[shown]}`
-                );
+                setDescription(services.items[shown]?.description);
                 setCategories(cats);
               }}
               autoPlay
@@ -206,22 +155,30 @@ const Services = () => {
               slidesToSlide={1}
               swipeable
             >
-              {firstItem?.photos.map((image, index) => (
-                <img
-                  key={index}
-                  src={image.imageUrl}
-                  style={{
-                    display: 'block',
-                    margin: 'auto',
-                    alignItems: 'center',
-                    flex: 1,
-                    justifyContent: 'center',
-                    maxHeight: '550px',
-                    padding: '5px',
-                  }}
-                  alt={image.alt}
-                />
-              ))}
+              {photos.map(
+                (
+                  image: {
+                    imageUrl: string | undefined;
+                    alt: string | undefined;
+                  },
+                  index: React.Key | null | undefined
+                ) => (
+                  <img
+                    key={index}
+                    src={image.imageUrl}
+                    style={{
+                      display: 'block',
+                      margin: 'auto',
+                      alignItems: 'center',
+                      flex: 1,
+                      justifyContent: 'center',
+                      maxHeight: '550px',
+                      padding: '5px',
+                    }}
+                    alt={image.alt}
+                  />
+                )
+              )}
             </Carousel>
           </div>
           <div
@@ -235,33 +192,27 @@ const Services = () => {
           >
             {description}
           </div>
-          <Button
-            onClick={() =>
-              carouselRef?.current?.goToSlide(
-                getRandomPhoto(3, carouselRef?.current.state.currentSlide)
-              )
-            }
-          >
-            {categories[3]}
-          </Button>
-          <Button
-            onClick={() =>
-              carouselRef?.current?.goToSlide(
-                getRandomPhoto(4, carouselRef?.current.state.currentSlide)
-              )
-            }
-          >
-            {categories[4]}
-          </Button>
-          <Button
-            onClick={() =>
-              carouselRef?.current?.goToSlide(
-                getRandomPhoto(5, carouselRef?.current.state.currentSlide)
-              )
-            }
-          >
-            {categories[5]}
-          </Button>
+          <div></div>
+          {services.items.map((__, index) =>
+            index >= Math.floor(services.items.length / 2) ? (
+              <Button
+                onClick={() =>
+                  carouselRef.current!.goToSlide(
+                    getRandomPhoto(
+                      index,
+                      carouselRef?.current.state.currentSlide
+                    ),
+                    {
+                      skipBeforeChange: true,
+                    }
+                  )
+                }
+              >
+                {categories[index]}
+              </Button>
+            ) : null
+          )}
+          <div></div>
         </div>
       </div>
     </section>

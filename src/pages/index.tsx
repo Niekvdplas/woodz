@@ -9,7 +9,6 @@ import LandingPageImage from '../components/LandingPageImage';
 import LazyShow from '../components/LazyShow';
 import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
-import Team from '../components/Team';
 import { Counter } from '../components/Timer';
 import config from '../config/index.json';
 import { TimeLeft } from '../utils/utils';
@@ -78,12 +77,12 @@ function App() {
       <LazyShow>
         <>
           <Portfolio />
-          <Canvas />
+          {/* <Canvas /> */}
         </>
       </LazyShow>
-      <LazyShow>
+      {/* <LazyShow>
         <Team />
-      </LazyShow>
+      </LazyShow> */}
       <LazyShow>
         <>
           <Canvas />

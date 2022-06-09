@@ -17,10 +17,6 @@
       "href": "portfolio"
     },
     {
-      "name": "Team",
-      "href": "team"
-    },
-    {
       "name": "Contact",
       "href": "contact"
     }
@@ -70,12 +66,12 @@
       }
     ]
   },
-  "product": {
+  "services": {
     "title": "Wat wij voor u kunnen betekenen",
     "items": [
       {
-        "title": "Kozijnen",
-        "description": "tekst",
+        "category": "Deuren",
+        "description": "Wij kunnen mooie deuren maken.",
         "photos": [
           {
             "imageUrl": "assets/images/services/door.jpg",
@@ -83,14 +79,20 @@
             "category": 0
           },
           {
-            "imageUrl": "assets/images/services/frames.jpg",
-            "alt": "Kozijnen",
-            "category": 1
-          },
-          {
             "imageUrl": "assets/images/services/storefront.jpg",
             "alt": "Prachtige deur",
             "category": 0
+          }
+        ]
+      },
+      {
+        "category": "Kozijnen",
+        "description": "Wij kunnen mooie kozijnen maken.",
+        "photos": [
+          {
+            "imageUrl": "assets/images/services/frames.jpg",
+            "alt": "Kozijnen",
+            "category": 1
           }
         ]
       }
