@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'Woodz kozijnen',
-  title: 'Woodz kozijnen',
-  description: 'Woodz kozijnen',
+  site_name: 'Woodz Kozijnen',
+  title: 'Woodz Kozijnen',
+  description: 'Woodz Kozijnen',
   locale: 'nl',
 };

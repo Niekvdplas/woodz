@@ -106,10 +106,10 @@ const Portfolio = () => {
                 <div className="hover-bg">
                   {' '}
                   <div className="hover-text">
-                    <h4>Tijdens</h4>
+                    <h4>After</h4>
                   </div>
                   <img
-                    src="assets/images/portfolio/collage2.jpg"
+                    src="assets/images/portfolio/collage3.jpg"
                     className="img-responsive"
                     alt="Project Title"
                   />{' '}
@@ -121,10 +121,10 @@ const Portfolio = () => {
                 <div className="hover-bg">
                   {' '}
                   <div className="hover-text">
-                    <h4>After</h4>
+                    <h4>Window master 10</h4>
                   </div>
                   <img
-                    src="assets/images/portfolio/collage3.jpg"
+                    src="assets/images/portfolio/windowmaster.jpg"
                     className="img-responsive"
                     alt="Project Title"
                   />{' '}

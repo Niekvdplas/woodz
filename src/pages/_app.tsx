@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: any) {
     <>
       <Head>
         <link rel="shortcut icon" href="assets/images/logo2circlesmall.png" />
-        <title>Woodz kozijnen</title>
+        <title>Woodz Kozijnen</title>
       </Head>
 
       <Component {...pageProps} />

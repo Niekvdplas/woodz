@@ -93,6 +93,11 @@
             "imageUrl": "assets/images/services/frames.jpg",
             "alt": "Kozijnen",
             "category": 1
+          },
+          {
+            "imageUrl": "assets/images/services/Schuifraam.jpg",
+            "alt": "Getoogd schuifraam",
+            "category": 1
           }
         ]
       }
