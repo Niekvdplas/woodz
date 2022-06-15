@@ -7,7 +7,7 @@ import { Counter } from '../components/Timer';
 import config from '../config/index.json';
 
 function MyApp({ Component, pageProps }: any) {
-  const releaseDate = new Date(2022, 5, 10, 19, 0, 0, 0);
+  const releaseDate = new Date(2022, 5, 1, 23, 31, 0, 0);
   const today = new Date();
   const { company } = config;
   const { logo } = company;
