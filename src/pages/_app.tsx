@@ -42,7 +42,9 @@ function MyApp({ Component, pageProps }: any) {
           </div>
         </div>
       ) : (
-        <Component {...pageProps} />
+        <>
+          <Component {...pageProps} />
+        </>
       )}
     </>
   );
