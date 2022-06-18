@@ -82,6 +82,11 @@
             "imageUrl": "assets/images/services/storefront.jpg",
             "alt": "Prachtige deur",
             "category": 0
+          },
+          {
+            "imageUrl": "assets/images/services/voordeur.jpeg",
+            "alt": "Prachtige voordeur",
+            "category": 0
           }
         ]
       },
