@@ -10,7 +10,7 @@ import LazyShow from '../components/LazyShow';
 import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
 
-const App = () => {
+const App = ({data}) => {
   return (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
       <div className={`relative bg-background`}>
@@ -57,3 +57,13 @@ const App = () => {
 };
 
 export default App;
+
+export async function getStaticProps() {
+  const data = await client.fetch(`*[_type == "gala"] | order(_createdAt desc)[0]`);
+  return {
+    props: {
+      data
+    },
+    revalidate: 60,
+  };
+}

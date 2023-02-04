@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {
-  LocationMarkerIcon,
-  MailIcon,
+  MapPinIcon,
+  EnvelopeIcon,
   PhoneIcon,
-} from '@heroicons/react/outline';
+} from '@heroicons/react/24/outline';
 
 import config from '../config/index.json';
 
@@ -29,7 +29,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <div className="leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
+            <div className="leading-4 text-gray-800">
               <div
                 style={{
                   display: 'flex',
@@ -37,14 +37,14 @@ const Footer = () => {
                   paddingBottom: '5px',
                 }}
               >
-                <LocationMarkerIcon className="w-5 h-5"></LocationMarkerIcon>
+                <MapPinIcon className="w-5 h-5"></MapPinIcon>
                 <span>&nbsp;{firstSection?.name}</span>
               </div>
               {firstSection?.location}
             </div>
           </a>
           <a href={`tel:${secondSection?.href}`}>
-            <div className="leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
+            <div className="leading-4 text-gray-800">
               <div
                 style={{
                   display: 'flex',
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
           </a>
           <a href={`mailto:${thirdSection?.href}`}>
-            <div className="leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">
+            <div className="leading-4 text-gray-800">
               <div
                 style={{
                   display: 'flex',
@@ -68,7 +68,7 @@ const Footer = () => {
                   paddingBottom: '5px',
                 }}
               >
-                <MailIcon className="w-5 h-5"></MailIcon>
+                <EnvelopeIcon className="w-5 h-5"></EnvelopeIcon>
                 <span>&nbsp;{thirdSection?.name}</span>
               </div>
               {thirdSection?.href}
@@ -76,7 +76,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="flex items-center mt-12 mb-1">
-          <p className="mt-6 text-xs lg:text-sm leading-none text-gray-900 dark:text-gray-50">
+          <p className="mt-6 text-xs lg:text-sm leading-none text-gray-900">
             &copy; {new Date().getFullYear()} designed by Niek van der Plas
           </p>
         </div>
