@@ -10,6 +10,8 @@ import LazyShow from '../components/LazyShow';
 import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
 
+import { client } from '../../lib/sanity-client';
+
 const App = ({data}) => {
   return (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
@@ -59,7 +61,7 @@ const App = ({data}) => {
 export default App;
 
 export async function getStaticProps() {
-  const data = await client.fetch(`*[_type == "gala"] | order(_createdAt desc)[0]`);
+  const data = await client.fetch(`*`);
   return {
     props: {
       data

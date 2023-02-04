@@ -1,42 +1,64 @@
 export default {
   name: 'info',
   type: 'document',
-  title: 'Bestuur',
+  title: 'Data',
   fields: [
     {
-      name: 'Praeses',
+      name: 'number',
       type: 'string',
-      title: 'Praeses',
+      title: 'Telefoon nummer',
     },
     {
-      name: 'Quaestor',
-      type: 'string',
-      title: 'Quaestor',
+      name: 'about',
+      type: 'text',
+      title: 'Over ons',
     },
     {
-      name: 'Abactis',
+      name: 'email',
       type: 'string',
-      title: 'Abactis',
+      title: 'Email',
     },
     {
-      name: 'Assessor',
-      type: 'string',
-      title: 'Assessor',
+      title: 'Portfolio',
+      type: 'array',
+      name: 'portfolio',
+      of: [{
+        title: 'image',
+        name: 'Foto',
+        type: 'image',
+        fields: [
+          {
+            name: 'caption',
+            type: 'string',
+            title: 'Caption',
+            options: {
+              isHighlighted: true // <-- make this field easily accessible
+            }
+          }
+        ]
+      }]
     },
     {
-      name: 'Mail',
-      type: 'string',
-      title: 'Mail abactis',
-    },
-    {
-      name: 'bestuurjaar',
-      type: 'number',
-      title: 'bestuur jaar (bv 40)',
-    },
-    {
-      name: 'Jaar',
-      type: 'string',
-      title: 'Welk bestuursjaar 40e = XVste',
-    },
+      title: 'Wat wij voor u kunnen beteken',
+      type: 'array',
+      name: 'betekenen',
+      of: [{
+        title: 'image',
+        name: 'Foto',
+        type: 'image',
+        fields: [
+          {
+            name: 'caption',
+            type: 'string',
+            title: 'Caption',
+          },
+          {
+            name: 'category',
+            type: 'string',
+            title: 'Category',
+          }
+        ]
+      }]
+    }
   ],
 };
