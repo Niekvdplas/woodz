@@ -5,13 +5,8 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "build-stats": "cross-env ANALYZE=true npm run build",
     "export": "next export",
-    "build-prod": "run-s clean build export",
-    "clean": "rimraf .next out",
-    "lint": "next lint",
-    "build-types": "tsc --noEmit --pretty",
-    "prepare": "husky install"
+    "build-prod": "run-s clean build export"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.9",
