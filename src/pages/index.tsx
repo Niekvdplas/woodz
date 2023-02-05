@@ -13,7 +13,6 @@ import Services from '../components/Services';
 import { client } from '../../lib/sanity-client';
 
 const App = ({data} : any) => {
-  console.log(data)
   return (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
       <div className={`relative bg-background`}>
@@ -30,7 +29,7 @@ const App = ({data} : any) => {
       <Canvas />
       <LazyShow>
         <>
-          <About />
+          <About info={data[0].about}/>
           <Canvas />
         </>
       </LazyShow>
@@ -43,16 +42,12 @@ const App = ({data} : any) => {
       <LazyShow>
         <>
           <Portfolio />
-          {/* <Canvas /> */}
         </>
       </LazyShow>
-      {/* <LazyShow>
-        <Team />
-      </LazyShow> */}
       <LazyShow>
         <>
           <Canvas />
-          <Footer />
+          <Footer info={data[0].contact}/>
         </>
       </LazyShow>
     </div>

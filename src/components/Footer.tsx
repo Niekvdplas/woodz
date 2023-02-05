@@ -8,12 +8,9 @@ import {
 
 import config from '../config/index.json';
 
-const Footer = () => {
-  const { company, contactinfo } = config;
+const Footer = ({info} : any) => {
+  const { company } = config;
   const { logo, name: companyName } = company;
-  const { sections } = contactinfo;
-  const [firstSection, secondSection, thirdSection] = sections;
-
   return (
     <div
       id="contact"
@@ -25,7 +22,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-4 h-12">
           <a
-            href={`http://maps.google.com/?q=${firstSection?.href}`}
+            href={`http://maps.google.com/?q=Woodz Kozijnen B.V.`}
             target="_blank"
             rel="noreferrer"
           >
@@ -38,12 +35,12 @@ const Footer = () => {
                 }}
               >
                 <MapPinIcon className="w-5 h-5"></MapPinIcon>
-                <span>&nbsp;{firstSection?.name}</span>
+                <span>&nbsp;Adres</span>
               </div>
-              {firstSection?.location}
+              Maessloot 8, 2231 PX, Rijnsburg
             </div>
           </a>
-          <a href={`tel:${secondSection?.href}`}>
+          <a href={`tel:${info.telefoon}`}>
             <div className="leading-4 text-gray-800">
               <div
                 style={{
@@ -54,12 +51,12 @@ const Footer = () => {
               >
                 <PhoneIcon className="w-5 h-5"></PhoneIcon>
 
-                <span>&nbsp;{secondSection?.name}</span>
+                <span>&nbsp;Telefoon</span>
               </div>
-              {secondSection?.href}
+              {info.telefoon}
             </div>
           </a>
-          <a href={`mailto:${thirdSection?.href}`}>
+          <a href={`mailto:${info.email}`}>
             <div className="leading-4 text-gray-800">
               <div
                 style={{
@@ -69,9 +66,9 @@ const Footer = () => {
                 }}
               >
                 <EnvelopeIcon className="w-5 h-5"></EnvelopeIcon>
-                <span>&nbsp;{thirdSection?.name}</span>
+                <span>&nbsp;Email</span>
               </div>
-              {thirdSection?.href}
+              {info.email}
             </div>
           </a>
         </div>
