@@ -1,4 +1,3 @@
-import { use } from "react";
 import About from "../components/About";
 import Canvas from "../components/Canvas";
 import Footer from "../components/Footer";
@@ -54,13 +53,3 @@ async function page() {
 }
 
 export default page
-
-// export async function getStaticProps() {
-  
-//   return {
-//     props: {
-//       data,
-//     },
-//     revalidate: 60,
-//   };
-// }
