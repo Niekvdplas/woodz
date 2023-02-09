@@ -1,3 +1,4 @@
+"use client"
 import React, { MutableRefObject, useEffect, useRef, useState } from 'react';
 
 import { motion, useAnimation } from 'framer-motion';

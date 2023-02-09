@@ -1,3 +1,4 @@
+"use client"
 import { useRef, FC, useEffect, useState } from 'react';
 
 import { CanvasContext } from '../hooks/useCanvas';
