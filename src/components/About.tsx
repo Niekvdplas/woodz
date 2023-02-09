@@ -30,18 +30,15 @@ const components = {
             />
           </svg>
         </div>
-        <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+        <div className="ml-16 text-lg leading-6 font-medium text-gray-900">
           {children}
-        </p>
+        </div>
       </dt>
-    ),
-
-    // Ex. 2: rendering custom list items
-  },
+    )
+  }
 };
 
 const About = ({ info }: any) => {
-  console.log(info);
   return (
     <div className={`py-12 bg-background`} id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,14 +48,13 @@ const About = ({ info }: any) => {
           >
             Over ons
           </h2>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <div className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             <PortableText value={info.aboutus} components={components} /> 
-          </p>
+          </div>
           <br />
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             Waarom zou u voor ons kiezen?
           </p>
-
         </div>
 
         <div className="mt-10">
