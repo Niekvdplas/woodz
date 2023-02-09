@@ -30,7 +30,7 @@ const App = ({data}: any) => {
       <Canvas />
       <LazyShow>
         <>
-          <About />
+          <About info={data[0].about}/>
           <Canvas />
         </>
       </LazyShow>
@@ -48,7 +48,7 @@ const App = ({data}: any) => {
       <LazyShow>
         <>
           <Canvas />
-          <Footer />
+          <Footer info={data[0].contact}/>
         </>
       </LazyShow>
     </div>

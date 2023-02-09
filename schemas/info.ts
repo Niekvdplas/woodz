@@ -4,20 +4,42 @@ export default {
   title: 'Data',
   fields: [
     {
-      name: 'number',
-      type: 'string',
-      title: 'Telefoon nummer',
+      name: 'contact',
+      title: 'Contact info',
+      type: 'document',
+      fields: [
+        {
+          name: 'email',
+          title: 'Email',
+          type: 'string',
+        },
+        {
+          name: 'telefoon',
+          title: 'Telefoon nummer',
+          type: 'string',
+        }
+      ]
     },
     {
       name: 'about',
-      type: 'text',
       title: 'Over ons',
+      type: 'document',
+      fields: [
+        {
+          name: 'aboutus',
+          title: 'Over ons beschrijving',
+          type: 'array',
+          of: [{type: 'block'}]
+        },
+        {
+          title: 'Waarom voor ons kiezen',
+          name: 'waarom',
+          type: 'array',
+          of: [{type: 'block'}]
+        }
+      ]
     },
-    {
-      name: 'email',
-      type: 'string',
-      title: 'Email',
-    },
+
     {
       title: 'Portfolio',
       type: 'array',
@@ -31,9 +53,6 @@ export default {
             name: 'caption',
             type: 'string',
             title: 'Caption',
-            options: {
-              isHighlighted: true // <-- make this field easily accessible
-            }
           }
         ]
       }]
