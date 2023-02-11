@@ -1,15 +1,16 @@
-import React from 'react';
+"use client"
+import React from "react";
+import Img from "next/image";
+import { useNextSanityImage } from "next-sanity-image";
+import { client } from "../lib/sanity-client";
 
-import config from '../config/index.json';
-
-const MainHeroImage = () => {
-  const { mainHero } = config;
+const MainHeroImage = ({ img }: any) => {
+  const imageProps = useNextSanityImage(client, img);
   return (
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img
+      <Img
+        {...imageProps}
         className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        src={mainHero.img}
-        alt="happy team image"
       />
     </div>
   );

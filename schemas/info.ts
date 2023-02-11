@@ -21,6 +21,16 @@ export default {
       ]
     },
     {
+      name: 'logo',
+      title: 'Logo',
+      type: 'image'
+    },
+    {
+      name: 'hoofdfoto',
+      title: 'Grote foto',
+      type: 'image'
+    },
+    {
       name: 'about',
       title: 'Over ons',
       type: 'document',
