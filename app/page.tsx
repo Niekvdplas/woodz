@@ -10,9 +10,10 @@ import Services from "../components/Services";
 import { client } from "../lib/sanity-client";
 import { Info } from "../typings";
 
+export const revalidate = 60;
+
 async function getData() {
-  const res = await client.fetch(`*[0]`, { next: { revalidate: 60 } }) as Info;
-  return res;
+  return await client.fetch(`*[0]`) as Info;
 }
 
 async function page() {
