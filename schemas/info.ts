@@ -55,14 +55,14 @@ export default {
       type: 'array',
       name: 'portfolio',
       of: [{
-        title: 'image',
+        title: 'Foto',
         name: 'Foto',
         type: 'image',
         fields: [
           {
             name: 'caption',
             type: 'string',
-            title: 'Caption',
+            title: 'Beschrijving',
           }
         ]
       }]
@@ -72,19 +72,19 @@ export default {
       type: 'array',
       name: 'betekenen',
       of: [{
-        title: 'image',
+        title: 'Foto',
         name: 'Foto',
         type: 'image',
         fields: [
           {
             name: 'caption',
             type: 'string',
-            title: 'Caption',
+            title: 'Beschrijving',
           },
           {
             name: 'category',
             type: 'string',
-            title: 'Category',
+            title: 'Categorie',
             options: {
               list: [
                 {title: 'Deuren', value: 'Deuren'},
