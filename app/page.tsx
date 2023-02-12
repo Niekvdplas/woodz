@@ -40,7 +40,7 @@ async function page() {
     </LazyShow>
     <LazyShow>
       <>
-        <Portfolio />
+        <Portfolio info={data.portfolio}/>
       </>
     </LazyShow>
     <LazyShow>

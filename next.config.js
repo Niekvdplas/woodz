@@ -4,9 +4,7 @@ const nextConfig = {
     appDir: true
   },
 	images: {
-		domains: ['cdn.sanity.io'],
-		loader: 'custom'
-	}
+		domains: ['cdn.sanity.io']	}
 };
 
 module.exports = nextConfig;

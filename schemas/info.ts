@@ -85,6 +85,13 @@ export default {
             name: 'category',
             type: 'string',
             title: 'Category',
+            options: {
+              list: [
+                {title: 'Deuren', value: 'Deuren'},
+                {title: 'Kozijnen', value: 'Kozijnen'}
+              ], 
+              layout: 'radio'
+            }
           }
         ]
       }]

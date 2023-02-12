@@ -1,15 +1,15 @@
 
 export interface asset {
-  _ref: 'string',
-  _type: 'string'
+  _ref: string,
+  _type: string
 }
 
 export interface image {
     _key?: string,
     _type: string,
     asset: asset
-    category?: 'string',
-    caption?: 'string'
+    category?: string,
+    caption?: string
 }
 
 export interface Info {
@@ -35,7 +35,5 @@ export interface Info {
     _type: string,
     asset: image
   },
-  portfolio:{
-
-  }
+  portfolio: [image]
 }

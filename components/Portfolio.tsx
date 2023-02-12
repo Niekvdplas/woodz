@@ -1,6 +1,19 @@
-import React from 'react';
+import { client } from "../lib/sanity-client";
+import { image } from "../typings";
+import imageUrlBuilder from "@sanity/image-url";
+import Image from "next/image";
 
-const Portfolio = () => {
+type Props = {
+  info: [image];
+};
+
+const Portfolio = ({ info: images }: Props) => {
+  const builder = imageUrlBuilder(client);
+
+  function urlFor(source: image): string {
+    return builder.image(source).toString();
+  }
+
   return (
     <section className={`bg-background py-8`} id="portfolio">
       <h1
@@ -13,127 +26,28 @@ const Portfolio = () => {
           className={`h-1 mx-auto bg-primary w-64 opacity-25 my-0 py-0 rounded-t`}
         ></div>
       </div>
-      <div className="text-center my-12">
-        <div className="portfolio-items">
-          <div
-            className="grid md:grid-cols-1 sm:grid-cols-1 xl:grid-cols-3 gap-8 content-center"
-            style={{
-              marginRight: '15%',
-              marginLeft: '15%',
-            }}
-          >
-            <div className="col-span-1">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {' '}
-                  <div className="hover-text">
-                    <h4>Ook voor een mooie voordeur kunt u bij ons terecht</h4>
+      <section className="overflow-hidden text-gray-700 ">
+        <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+          <div className="flex flex-wrap -m-1 md:-m-2">
+            {images.map((im) => (
+              <div className="flex flex-wrap md:w-1/3 p-1 md:p-2" key={im._key}>
+                <div className="w-full  overflow-hidden relative bg-no-repeat bg-cover">
+                  <Image
+                    alt="gallery"
+                    className="block object-cover object-center w-full h-full rounded-lg"
+                    width={1000}
+                    height={1000}
+                    src={urlFor(im)}
+                  />
+                  <div className="absolute top-0 right-0 bottom-0 rounded-lg  left-0 w-full h-full overflow-hidden bg-fixed bg-blue-400/0 hover:bg-blue-400/60 transition duration-600 ease-in-out text-3xl font-bold text-white flex justify-center items-end pb-24 text-opacity-0 hover:text-opacity-80 text-center">
+                    {im.caption}
                   </div>
-                  <img
-                    src="assets/images/portfolio/door.jpg"
-                    className="img-responsive"
-                    alt="Project Title"
-                  />{' '}
                 </div>
               </div>
-            </div>
-            <div className="col-span-1">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {' '}
-                  <div className="hover-text">
-                    <h4>Prachtige kozijnen, klaar voor transport</h4>
-                  </div>
-                  <img
-                    src="assets/images/portfolio/frames.jpg"
-                    className="img-responsive"
-                    alt="Project Title"
-                  />{' '}
-                </div>
-                <div className="hover-bg">
-                  {' '}
-                  <div className="hover-text">
-                    <h4>Prachtige kozijnen, klaar voor transport</h4>
-                  </div>
-                  <img
-                    src="assets/images/portfolio/transport.jpg"
-                    className="img-responsive"
-                    alt="Project Title"
-                  />{' '}
-                </div>
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {' '}
-                  <div className="hover-text">
-                    <h4>Afgewerkte winkelpui</h4>
-                  </div>
-                  <img
-                    src="assets/images/portfolio/storefront.jpg"
-                    className="img-responsive"
-                    alt="Project Title"
-                  />{' '}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="grid md:grid-cols-1 sm:grid-cols-1 xl:grid-cols-3 gap-8 content-center"
-            style={{
-              marginRight: '15%',
-              marginLeft: '15%',
-            }}
-          >
-            <div className="col-span-1">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {' '}
-                  <div className="hover-text">
-                    <h4>Before</h4>
-                  </div>
-                  <img
-                    src="assets/images/portfolio/collage1.jpg"
-                    className="img-responsive"
-                    alt="Project Title"
-                  />{' '}
-                </div>
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {' '}
-                  <div className="hover-text">
-                    <h4>After</h4>
-                  </div>
-                  <img
-                    src="assets/images/portfolio/collage3.jpg"
-                    className="img-responsive"
-                    alt="Project Title"
-                  />{' '}
-                </div>
-              </div>
-            </div>
-            <div className="col-span-1">
-              <div className="portfolio-item">
-                <div className="hover-bg">
-                  {' '}
-                  <div className="hover-text">
-                    <h4>Window master 10</h4>
-                  </div>
-                  <img
-                    src="assets/images/portfolio/windowmaster.jpg"
-                    className="img-responsive"
-                    alt="Project Title"
-                  />{' '}
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 };
