@@ -1,5 +1,6 @@
 import React from "react";
 import { PortableText } from "@portabletext/react";
+import { TypedObject } from "sanity";
 
 const components = {
   list: {
@@ -38,7 +39,14 @@ const components = {
   }
 };
 
-const About = ({ info }: any) => {
+type Props={
+  info:{
+    aboutus : [TypedObject],
+    waarom: [TypedObject]
+  }
+}
+
+const About = ({ info }: Props) => {
   return (
     <div className={`py-12 bg-background`} id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

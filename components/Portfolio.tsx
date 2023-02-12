@@ -39,7 +39,7 @@ const Portfolio = ({ info: images }: Props) => {
                     height={1000}
                     src={urlFor(im)}
                   />
-                  <div className="absolute top-0 right-0 bottom-0 rounded-lg  left-0 w-full h-full overflow-hidden bg-fixed bg-blue-400/0 hover:bg-blue-400/60 transition duration-600 ease-in-out text-3xl font-bold text-white flex justify-center items-center text-opacity-0 hover:text-opacity-80 text-center">
+                  <div className="absolute top-0 right-0 bottom-0 rounded-lg left-0 w-full h-full overflow-hidden bg-fixed bg-blue-400/0 hover:bg-blue-400/60 transition duration-600 ease-in-out text-3xl font-bold text-white flex justify-center items-center text-opacity-0 hover:text-opacity-80 text-center px-2">
                     {im.caption}
                   </div>
                 </div>

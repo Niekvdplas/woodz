@@ -52,7 +52,7 @@ async function page() {
     <LazyShow>
       <>
         <Canvas />
-        <Footer info={data.contact} />
+        <Footer info={data.contact} logo={data.logo} />
       </>
     </LazyShow>
   </div>

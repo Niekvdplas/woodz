@@ -5,12 +5,25 @@ import {
   EnvelopeIcon,
   PhoneIcon,
 } from '@heroicons/react/24/outline';
+import { image } from '../typings';
+import imageUrlBuilder from "@sanity/image-url";
+import { client } from '../lib/sanity-client';
 
-import config from '../config/index.json';
 
-const Footer = ({info} : any) => {
-  const { company } = config;
-  const { logo, name: companyName } = company;
+type Props = {
+  info: {
+    email: string,
+    telefoon: string
+  },
+  logo: image
+}
+
+const Footer = ({info, logo} : Props) => {
+  const builder = imageUrlBuilder(client);
+
+  function urlFor(source: image): string {
+    return builder.image(source).toString();
+  }
   return (
     <div
       id="contact"
@@ -18,7 +31,7 @@ const Footer = ({info} : any) => {
     >
       <div className="flex flex-col items-center justify-center">
         <div>
-          <img src={logo} alt={companyName} className="w-50 h-16" />
+          <img src={urlFor(logo)} alt="Woodz" className="w-50 h-16" />
         </div>
         <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-4 h-12">
           <a
