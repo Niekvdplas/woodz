@@ -28,10 +28,10 @@ const Portfolio = ({ info: images }: Props) => {
       </div>
       <section className="overflow-hidden text-gray-700 ">
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
-          <div className="flex flex-wrap -m-1 md:-m-2">
+          <div className="md:columns-3 -m-1 md:-m-2">
             {images.map((im) => (
-              <div className="flex flex-wrap md:w-1/3 p-1 md:p-2" key={im._key}>
-                <div className="w-full  overflow-hidden relative bg-no-repeat bg-cover">
+              <div className="py-2 hover:scale-105 transition duration-700" key={im._key}>
+                <div className="w-full overflow-hidden relative bg-no-repeat bg-cover border-primary border rounded-lg">
                   <Image
                     alt="gallery"
                     className="block object-cover object-center w-full h-full rounded-lg"
