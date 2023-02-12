@@ -15,7 +15,10 @@ type Props = {
     email: string,
     telefoon: string
   },
-  logo: image
+  logo: {
+    _type: string,
+    asset: image
+  }
 }
 
 const Footer = ({info, logo} : Props) => {
@@ -31,7 +34,7 @@ const Footer = ({info, logo} : Props) => {
     >
       <div className="flex flex-col items-center justify-center">
         <div>
-          <img src={urlFor(logo)} alt="Woodz" className="w-50 h-16" />
+          <img src={urlFor(logo.asset)} alt="Woodz" className="w-50 h-16" />
         </div>
         <div className="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-4 h-12">
           <a
