@@ -21,6 +21,16 @@ export default {
       ]
     },
     {
+      name: 'logo',
+      title: 'Logo',
+      type: 'image'
+    },
+    {
+      name: 'hoofdfoto',
+      title: 'Grote foto',
+      type: 'image'
+    },
+    {
       name: 'about',
       title: 'Over ons',
       type: 'document',
@@ -75,6 +85,13 @@ export default {
             name: 'category',
             type: 'string',
             title: 'Category',
+            options: {
+              list: [
+                {title: 'Deuren', value: 'Deuren'},
+                {title: 'Kozijnen', value: 'Kozijnen'}
+              ], 
+              layout: 'radio'
+            }
           }
         ]
       }]

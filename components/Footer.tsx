@@ -56,7 +56,7 @@ const Footer = ({info} : any) => {
               {info.telefoon}
             </div>
           </a>
-          <a href={`mailto:${info.email}`}>
+          <a href={`mailto:${info.email}?subject=Contact via website: `}>
             <div className="leading-4 text-gray-800">
               <div
                 style={{

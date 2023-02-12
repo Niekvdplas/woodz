@@ -4,13 +4,42 @@ import React, { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { DocumentDuplicateIcon, XCircleIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
+import imageUrlBuilder from "@sanity/image-url";
 
-import config from '../config/index.json';
+import { client } from '../lib/sanity-client';
+import { image } from '../typings';
 
-const Menu = () => {
-  const { navigation, company } = config;
-  const { name: companyName, logo } = company;
+type Props = {
+  logo: {
+    _type: string,
+    asset: image
+  }
+}
 
+const Menu = ({logo} : Props) => {
+  let nav =  [
+    {
+      "name": "Over",
+      "href": "about"
+    },
+    {
+      "name": "Diensten",
+      "href": "diensten"
+    },
+    {
+      "name": "Portfolio",
+      "href": "portfolio"
+    },
+    {
+      "name": "Contact",
+      "href": "contact"
+    }
+  ]
+  const builder = imageUrlBuilder(client);
+
+  function urlFor(source: image): string {
+    return builder.image(source).toString();
+  }
   return (
     <>
       <svg
@@ -31,8 +60,12 @@ const Menu = () => {
           >
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto">
-                <span className="sr-only">{companyName}</span>
-                <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} />
+                <span className="sr-only">Woodz</span>
+                <img
+                  src={urlFor(logo.asset)}
+                  className="h-16 w-auto sm:h-16" // layout="responsive" prior to Next 13.0.0
+                />
+                {/* <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} /> */}
                 <div className="-mr-2 flex items-center md:hidden">
                   <Popover.Button
                     className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
@@ -44,7 +77,7 @@ const Menu = () => {
               </div>
             </div>
             <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-              {navigation.map((item) => (
+              {nav.map((item) => (
                 <Link
                   spy={true}
                   smooth={true}
@@ -78,7 +111,7 @@ const Menu = () => {
             >
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img className="h-8 w-auto" src={logo} alt="" />
+                  <img className="h-8 w-auto" src={urlFor(logo.asset)} alt="" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button
@@ -90,7 +123,7 @@ const Menu = () => {
                 </div>
               </div>
               <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
+                {nav.map((item) => (
                   <Link
                     spy={true}
                     smooth={true}
