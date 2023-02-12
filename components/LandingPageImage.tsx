@@ -3,7 +3,14 @@ import imageUrlBuilder from "@sanity/image-url";
 import { client } from "../lib/sanity-client";
 import { image } from "../typings";
 
-const MainHeroImage = ({ img }: any) => {
+type Props = {
+  img: {
+    _type: string,
+    asset: image
+  }
+}
+
+const MainHeroImage = ({ img }: Props) => {
   const builder = imageUrlBuilder(client);
 
   function urlFor(source: image): string {
@@ -12,7 +19,7 @@ const MainHeroImage = ({ img }: any) => {
   return (
     <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
       <img
-        src={urlFor(img)}
+        src={urlFor(img.asset)}
         className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
       />
     </div>

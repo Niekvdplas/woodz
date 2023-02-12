@@ -4,12 +4,19 @@ import React, { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { DocumentDuplicateIcon, XCircleIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
-import Img from 'next/image';
-import { useNextSanityImage } from 'next-sanity-image';
+import imageUrlBuilder from "@sanity/image-url";
 
 import { client } from '../lib/sanity-client';
+import { image } from '../typings';
 
-const Menu = ({logo} : any) => {
+type Props = {
+  logo: {
+    _type: string,
+    asset: image
+  }
+}
+
+const Menu = ({logo} : Props) => {
   let nav =  [
     {
       "name": "Over",
@@ -28,10 +35,11 @@ const Menu = ({logo} : any) => {
       "href": "contact"
     }
   ]
-  const imageProps = useNextSanityImage(
-		client,
-		logo
-	);
+  const builder = imageUrlBuilder(client);
+
+  function urlFor(source: image): string {
+    return builder.image(source).toString();
+  }
   return (
     <>
       <svg
@@ -53,8 +61,8 @@ const Menu = ({logo} : any) => {
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto">
                 <span className="sr-only">Woodz</span>
-                <Img
-                  {...imageProps}
+                <img
+                  src={urlFor(logo.asset)}
                   className="h-16 w-auto sm:h-16" // layout="responsive" prior to Next 13.0.0
                 />
                 {/* <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} /> */}
@@ -103,7 +111,7 @@ const Menu = ({logo} : any) => {
             >
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img className="h-8 w-auto" src={logo} alt="" />
+                  <img className="h-8 w-auto" src={urlFor(logo.asset)} alt="" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button
