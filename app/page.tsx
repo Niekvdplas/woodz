@@ -10,8 +10,14 @@ import Services from "../components/Services";
 import { client } from "../lib/sanity-client";
 import { Info } from "../typings";
 
+export const revalidate = 60;
+
+async function getData() {
+  return await client.fetch(`*[0]`) as Info;
+}
+
 async function page() {
-  const data = await client.fetch(`*[0]`) as Info;
+  const data = await getData();
   return (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
     <div className={`relative bg-background`}>
