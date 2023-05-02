@@ -6,7 +6,6 @@ import LandingPage from "../components/LandingPage";
 import LandingPageImage from "../components/LandingPageImage";
 import LazyShow from "../components/LazyShow";
 import Portfolio from "../components/Portfolio";
-import Services from "../components/Services";
 import { client } from "../lib/sanity-client";
 import { Info } from "../typings";
 
@@ -38,12 +37,12 @@ async function page() {
         <Canvas />
       </>
     </LazyShow>
-    <LazyShow>
+    {/* <LazyShow>
       <>
-        <Services info={data.betekenen}/>
+        <Services info={data.betekenen}/> NO SERVICES
         <Canvas />
       </>
-    </LazyShow>
+    </LazyShow> */}
     <LazyShow>
       <>
         <Portfolio info={data.portfolio}/>

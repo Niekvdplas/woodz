@@ -20,9 +20,9 @@ export interface Info {
     aboutus: Array;
     waarom: Array;
   }
-  betekenen: [
-    image
-  ]
+  // betekenen: [ NO SERVICES
+  //   image
+  // ]
   contact: {
     email: string;
     telefoon: string;

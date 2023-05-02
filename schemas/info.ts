@@ -67,35 +67,35 @@ export default {
         ]
       }]
     },
-    {
-      title: 'Wat wij voor u kunnen beteken',
-      type: 'array',
-      name: 'betekenen',
-      of: [{
-        title: 'Foto',
-        name: 'Foto',
-        type: 'image',
-        fields: [
-          {
-            name: 'caption',
-            type: 'string',
-            title: 'Beschrijving',
-          },
-          {
-            name: 'category',
-            type: 'string',
-            title: 'Categorie',
-            options: {
-              list: [
-                {title: 'Deuren', value: 'Deuren'},
-                {title: 'Kozijnen', value: 'Kozijnen'},
-                {title: 'Ramen', value: 'Ramen'},
-              ], 
-              layout: 'radio'
-            }
-          }
-        ]
-      }]
-    }
+    // {
+    //   title: 'Wat wij voor u kunnen beteken',
+    //   type: 'array',
+    //   name: 'betekenen',
+    //   of: [{
+    //     title: 'Foto',
+    //     name: 'Foto',
+    //     type: 'image',
+    //     fields: [
+    //       {
+    //         name: 'caption',
+    //         type: 'string', NO SERVICES
+    //         title: 'Beschrijving',
+    //       },
+    //       {
+    //         name: 'category',
+    //         type: 'string',
+    //         title: 'Categorie',
+    //         options: {
+    //           list: [
+    //             {title: 'Deuren', value: 'Deuren'},
+    //             {title: 'Kozijnen', value: 'Kozijnen'},
+    //             {title: 'Ramen', value: 'Ramen'},
+    //           ], 
+    //           layout: 'radio'
+    //         }
+    //       }
+    //     ]
+    //   }]
+    // }
   ],
 };

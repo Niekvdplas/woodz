@@ -49,7 +49,7 @@ const Services = ({ info }: Props) => {
                 Deuren
               </div>
             </div>
-            <div>
+            <div className="p-10">
               {(isActive == "Deuren" || isActive == "Ramen") &&
                 description !== "" && (
                   <div className="flex flex-1 text-center text-2xl text-stone-600 font-semibold justify-center">
@@ -96,7 +96,7 @@ const Services = ({ info }: Props) => {
                 Kozijnen
               </div>
             </div>
-            <div>
+            <div className="p-10">
               {isActive == "Kozijnen" &&
                 description !== "" && (
                   <div className="flex flex-1 text-center text-2xl text-stone-600 font-semibold justify-center">
