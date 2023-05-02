@@ -22,7 +22,6 @@ const Services = ({ info }: Props) => {
     return builder.image(source).toString();
   }
 
-
   return (
     <section className={`bg-background py-8`} id="diensten">
       <div className={`container  mx-auto m-2`}>
@@ -40,19 +39,33 @@ const Services = ({ info }: Props) => {
         </h1>
         <Divider />
         <div className={`flex flex-col md:flex-row px-4`}>
-          <div className="flex flex-col w-full mb-2">
-            <div
-              className={`w-full my-2 text-5xl font-bold leading-tight text-center ${
-                isActive === "Deuren" ? `text-primary` : `text-black`
-              }`}
-            >
-              Deuren
-            </div>
-            {isActive == "Deuren" && description !== "" && (
-              <div className="flex flex-1 text-center text-md text-black font-semibold justify-center pt-10">
-                {description}
+          <div className="flex flex-col w-full mb-2 justify-between">
+            <div>
+              <div
+                className={`w-full text-5xl font-bold leading-tight text-center ${
+                  isActive === "Deuren" ? `text-primary` : `text-black`
+                }`}
+              >
+                Deuren
               </div>
-            )}
+            </div>
+            <div>
+              {(isActive == "Deuren" || isActive == "Ramen") &&
+                description !== "" && (
+                  <div className="flex flex-1 text-center text-2xl text-stone-600 font-semibold justify-center">
+                    {description}
+                  </div>
+                )}
+            </div>
+            <div>
+              <div
+                className={`w-full text-5xl font-bold leading-tight text-center ${
+                  isActive === "Ramen" ? `text-primary` : `text-black`
+                }`}
+              >
+                Ramen
+              </div>
+            </div>
           </div>
           <Carousel
             infiniteLoop={true}
@@ -61,9 +74,9 @@ const Services = ({ info }: Props) => {
             dynamicHeight={true}
             showStatus={false}
             showIndicators={false}
-            onChange={(index)=> {
-              setDescription(info[index]?.caption!)
-              setIsActive(info[index]?.category!)
+            onChange={(index) => {
+              setDescription(info[index]?.caption!);
+              setIsActive(info[index]?.category!);
             }}
             className="w-full items-center mx-auto"
           >
@@ -73,19 +86,26 @@ const Services = ({ info }: Props) => {
               </div>
             ))}
           </Carousel>
-          <div className="flex flex-col w-full">
-            <div
-              className={`w-full my-2 text-5xl font-bold leading-tight text-center ${
-                isActive === "Kozijnen" ? `text-primary` : `text-black`
-              }`}
-            >
-              Kozijnen
-            </div>
-            {isActive === "Kozijnen" && description !== "" && (
-              <div className="flex flex-1 text-center text-md text-black font-semibold justify-center pt-10">
-                {description}
+          <div className="flex flex-col w-full mb-2 justify-between">
+            <div>
+              <div
+                className={`w-full text-5xl font-bold leading-tight text-center ${
+                  isActive === "Kozijnen" ? `text-primary` : `text-black`
+                }`}
+              >
+                Kozijnen
               </div>
-            )}
+            </div>
+            <div>
+              {isActive == "Kozijnen" &&
+                description !== "" && (
+                  <div className="flex flex-1 text-center text-2xl text-stone-600 font-semibold justify-center">
+                    {description}
+                  </div>
+                )}
+            </div>
+            <div>
+            </div>
           </div>
         </div>
       </div>

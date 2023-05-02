@@ -56,7 +56,7 @@ const About = ({ info }: Props) => {
           >
             Over ons
           </h2>
-          <div className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <div className="my-4 max-w-4xl text-xl text-gray-500 lg:mx-auto">
             <PortableText value={info.aboutus} components={components} /> 
           </div>
           <br />

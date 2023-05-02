@@ -30,7 +30,7 @@ const Portfolio = ({ info: images }: Props) => {
         <div className="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
           <div className="md:columns-3 -m-1 md:-m-2">
             {images.map((im) => (
-              <div className="py-2 hover:scale-105 transition duration-700" key={im._key}>
+              <div className="py-2 hover:scale-105 transition-all duration-700" key={im._key}>
                 <div className="w-full overflow-hidden relative bg-no-repeat bg-cover border-primary border rounded-lg">
                   <Image
                     alt="gallery"

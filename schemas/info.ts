@@ -88,7 +88,8 @@ export default {
             options: {
               list: [
                 {title: 'Deuren', value: 'Deuren'},
-                {title: 'Kozijnen', value: 'Kozijnen'}
+                {title: 'Kozijnen', value: 'Kozijnen'},
+                {title: 'Ramen', value: 'Ramen'},
               ], 
               layout: 'radio'
             }
