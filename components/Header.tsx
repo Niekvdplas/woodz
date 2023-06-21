@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react';
 
 import { Popover, Transition } from '@headlessui/react';
-import { Bars3Icon, DocumentDuplicateIcon, XCircleIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
 import imageUrlBuilder from "@sanity/image-url";
 
