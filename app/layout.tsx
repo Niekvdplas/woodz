@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata = {
   title: "Woodz Kozijnen",
   description: "Woodz Kozijnen",
-  icons: "assets/images/logo2circlesmall.png"
+  icons: "assets/images/logowoodz.png"
 }
 
 
